@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import  Nav  from './Nav/Nav';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import  Portif  from './por/Portif';
+import  Contact  from './Contact/Contact';
+import  About  from './About/About';
+import Layout from './LayOut/Layout';
+import Main from './Main/Main';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const router = createBrowserRouter(
+  [
+    { path:"" , element:  <Layout />,children:
+      [
+        { path:"",element:<Main />},
+        { path:"about",element:<About />},
+        {path:"portif" , element:  <Portif />},
+        {path:"contact" , element:  <Contact />},
+        {path:"*" , element:  <div className=' d-flex justify-content-center align-items-center'>
+          <h1 className="text">404 Not Found!</h1>
+        </div>}
+      ] 
+    }  
+  ])
+export class App extends Component
+{
+
+  
+  render()
+  {
+    return    <>
+
+          
+            
+            <RouterProvider router={router}  />
+
+           
+            </>
+  }
 }
-
-export default App;

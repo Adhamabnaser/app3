@@ -1,0 +1,31 @@
+
+.pos
+{
+position: relative;
+}
+.posh:hover
+{
+    opacity: 1;
+}
+.pos img
+{
+    width: 100%;
+}
+
+.posh
+{
+    background-color: rgba(0, 255, 255, 0.63);
+    color: white;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+}
+
+.mt-6
+{
+    margin-top: 5rem;
+}

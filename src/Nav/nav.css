@@ -1,0 +1,15 @@
+.color-c
+{
+    background-color: rgb(26, 26, 51) !important;
+}
+li
+{
+    background-color:transparent !important;
+    border-radius: 10px !important;
+
+}
+li :hover
+{
+    background-color: aquamarine;
+    border-radius: 10px;
+}
